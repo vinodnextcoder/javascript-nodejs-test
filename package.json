@@ -3,11 +3,11 @@
   "version": "1.0.0",
   "description": "learn nodejs for me",
   "main": "index.js",
-   "scripts": {
+  "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index.js"
   },
-    "repository": {
+  "repository": {
     "type": "git",
     "url": "git+https://github.com/vinodnextcoder/javascript-nodejs-test.git"
   },
@@ -21,6 +21,8 @@
   },
   "homepage": "https://github.com/vinodnextcoder/javascript-nodejs-test#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "async": "^3.2.0",
+    "express": "^4.17.1",
+    "promise": "^8.1.0"
   }
 }
