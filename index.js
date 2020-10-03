@@ -1,7 +1,7 @@
 var express = require("express");
 var app = express();
 
-app.get("/url", (req, res, next) => {
+app.get("/", (req, res, next) => {
   let user = { userList: ["vinod pawar", "Nitin Pawar", "Rauhl Pawar"] };
   res.json(user);
 
