@@ -1,0 +1,25 @@
+{
+  "name": "vinodlearn",
+  "version": "1.0.0",
+  "description": "learn nodejs for me",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vinodnextcoder/javascript-nodejs-test.git"
+  },
+  "keywords": [
+    "nodejs"
+  ],
+  "author": "vinod",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vinodnextcoder/javascript-nodejs-test/issues"
+  },
+  "homepage": "https://github.com/vinodnextcoder/javascript-nodejs-test#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
