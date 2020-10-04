@@ -8,7 +8,8 @@ app.get("/", (req, res, next) => {
 
 });
 app.get("/asyncwaterExample", aasyncWaterFile.asyncwaterExample)
-app.get("/asyncparallelExample", aasyncWaterFile.asyncparallelExample)
+app.get("/asyncparallelExample", aasyncWaterFile.asyncparallelExample);
+app.get("/asyncEachExample", aasyncWaterFile.asyncEachExample);
 
 app.listen(3000, () => {
   console.log("Server running on port 3000");
