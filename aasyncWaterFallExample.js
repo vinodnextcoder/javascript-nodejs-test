@@ -60,6 +60,12 @@ function asyncEachExample(req, res) {
                 msg = 'The element not found'
             }
             callback(null, msg)
+        },
+        3: function (callback) {
+            var arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
+            var removed = arr.splice(2,2);
+            msg = 'The element was found at ' + (removed)
+            callback(null, msg)
         }
     },
         function (err, results) {
