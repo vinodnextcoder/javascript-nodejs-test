@@ -66,6 +66,12 @@ function asyncEachExample(req, res) {
             var removed = arr.splice(2,2);
             msg = 'The element was found at ' + (removed)
             callback(null, msg)
+        },
+        4: function (callback) {
+            var Strings = "repoleveD kcatSlluF"
+           let reversedStrings= ReverseStringIterative(Strings);
+            msg = 'The String ' + reversedStrings
+            callback(null, msg)
         }
     },
         function (err, results) {
@@ -96,4 +102,18 @@ function linearSearch(array, toFind){
     }
     return -1;
 }
+function ReverseStringIterative (string) {
+    if (typeof string !== 'string') {
+      throw new TypeError('The given value is not a string')
+    }
+    let reversedString = ''
+    let index
+  
+    for (index = string.length - 1; index >= 0; index--) {
+      reversedString += string[index]
+    }
+  
+    return reversedString
+  }
+  
 module.exports = funcsave;
