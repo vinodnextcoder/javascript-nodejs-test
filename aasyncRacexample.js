@@ -25,17 +25,25 @@ function lookUpProfile(firstName, prop){
       }
     }return "No such contact";
 }
-    function asyncRaceExample(req, res) {
-        async.race([
-            function (callback) {
-                let msg = lookUpProfile("pradip", "likes");
-                callback(null, msg)
-            }
-        ],
-            function (err, result) {
-                console.log('The result is ', result);
-                res.json(result);
-            });
-    };
+function asyncRaceExample(req, res) {
+    async.times(5, function (n, next) {
+        let msg = lookUpProfile("pradip", "likes");
+        next(null, msg)
+    }, function (err, users) {
+        res.json(users);
+    });
+};
 asyncCtrl.asyncRaceExample = asyncRaceExample
+function generatePyramid() {
+    var totalNumberofRows = 5;
+    var output = '';
+    for (var i = 1; i <= totalNumberofRows; i++) {
+        for (var j = 1; j <= i; j++) {
+            output += j + '  ';
+        }
+        console.log(output);
+        output = '';
+    }
+    return output;
+}
 module.exports = asyncCtrl;
