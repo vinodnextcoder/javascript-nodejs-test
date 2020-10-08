@@ -50,7 +50,12 @@ function asyncTimesExample(req, res) {
     async.times(1, function (n,cb) {
         let str="NITIN"
         let msg = palindrome(str) 
-        cb(null, msg)
+        let reverseStr=reverseString("hello")
+        let finalObj={
+            msg,
+            reverseStr
+        }
+        cb(null, finalObj)
     }, function (err, users) {
         res.json(users);
     });
@@ -73,6 +78,12 @@ function palindrome(str) {
       "msg":msg
     }
     return msgResponse
+  }
+  function reverseString(str) {
+    return str
+      .split('')
+      .reverse()
+      .join('');
   }
   
 module.exports = asyncCtrl;
