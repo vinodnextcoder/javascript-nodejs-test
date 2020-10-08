@@ -10,6 +10,7 @@ app.get("/", (req, res, next) => {
 app.get("/asyncwaterExample", aasyncWaterFile.asyncwaterExample)
 app.get("/asyncparallelExample", aasyncWaterFile.asyncparallelExample);
 app.get("/asyncRaceExample", aasyncRaceCtrl.asyncRaceExample);
+app.get("/asyncTimesExample", aasyncRaceCtrl.asyncTimesExample);
 
 
 

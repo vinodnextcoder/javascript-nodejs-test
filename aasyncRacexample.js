@@ -46,4 +46,33 @@ function generatePyramid() {
     }
     return output;
 }
+function asyncTimesExample(req, res) {
+    async.times(1, function (n,cb) {
+        let str="NITIN"
+        let msg = palindrome(str) 
+        cb(null, msg)
+    }, function (err, users) {
+        res.json(users);
+    });
+};
+asyncCtrl.asyncTimesExample=asyncTimesExample
+function palindrome(str) {
+    str = str.replace(/[\W_]/g, '').toLowerCase();
+    let rev = str.split('').reverse().join('');
+    test=str === rev;
+    let msg="";
+    if (test){
+        msg="Number is Palimdrome"
+    }
+    else{
+        msg="Number is Not Palimdrome"
+    }
+  let msgResponse=  {
+      "Input String":str,
+      "Output String":rev,
+      "msg":msg
+    }
+    return msgResponse
+  }
+  
 module.exports = asyncCtrl;
