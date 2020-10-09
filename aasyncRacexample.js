@@ -51,9 +51,11 @@ function asyncTimesExample(req, res) {
         let str="NITIN"
         let msg = palindrome(str) 
         let reverseStr=reverseString("hello")
-        let finalObj={
+        let multiplesThreeAndFiveNM=multiplesThreeAndFive (10) 
+        let finalObj = {
             msg,
-            reverseStr
+            reverseStr,
+            multiplesThreeAndFiveNM
         }
         cb(null, finalObj)
     }, function (err, users) {
@@ -85,5 +87,16 @@ function palindrome(str) {
       .reverse()
       .join('');
   }
+  function multiplesThreeAndFive (num) {
+    let total = 0
+    // total for calculating the sum
+    for (let i = 0; i <= num; i++) {
+      if (i % 3 === 0 || i % 5 === 0) {
+        total += i
+      }
+    }
+    return total
+  }
+  
   
 module.exports = asyncCtrl;
