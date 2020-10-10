@@ -148,6 +148,10 @@ function ReverseStringIterative (string) {
       });
     });
   };
+// apply bind array
+  function largestOfFour(arr) {
+    return arr.map(Function.apply.bind(Math.max, null));
+  }
   
 
 module.exports = funcsave;
