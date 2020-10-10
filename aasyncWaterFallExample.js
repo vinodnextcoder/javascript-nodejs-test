@@ -141,6 +141,13 @@ function ReverseStringIterative (string) {
     }
     return largest;
   }
+  function largestOfFour(arr) {
+    return arr.map(function(item) {
+      return item.reduce(function(current, previous) {
+       return (current > previous) ? current : previous;
+      });
+    });
+  };
   
 
 module.exports = funcsave;
