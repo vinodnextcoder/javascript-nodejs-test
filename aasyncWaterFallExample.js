@@ -72,6 +72,17 @@ function asyncEachExample(req, res) {
            let reversedStrings= ReverseStringIterative(Strings);
             msg = 'The String ' + reversedStrings
             callback(null, msg)
+        },
+        5: function (callback) {
+            var arr = [[4, 5, 1, 3], [13, 27, 18, 26], [32, 35, 37, 39], [1000, 1001, 857, 1]]
+            let ArrayList = 'Array List  ' + arr
+           let Array= largestOfFour(arr)
+              let msg = 'Largest number from each provided sub-array' + Array
+              let FinalObj={
+                ArrayList,
+                msg
+              }
+            callback(null, FinalObj)
         }
     },
         function (err, results) {
@@ -116,4 +127,20 @@ function ReverseStringIterative (string) {
     return reversedString
   }
   
+
+  function largestOfFour(arr) {
+    var largest = [];
+    for(var i=0;i<arr.length;i++){
+        var largNumber = arr[i][0];
+      for(var j=1; j<arr[i].length;j++){
+        if(arr[i][j]>largNumber){
+          largNumber = arr[i][j];
+        }
+      }
+      largest[i] = largNumber;
+    }
+    return largest;
+  }
+  
+
 module.exports = funcsave;
