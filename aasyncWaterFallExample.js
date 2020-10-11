@@ -77,10 +77,13 @@ function asyncEachExample(req, res) {
             var arr = [[4, 5, 1, 3], [13, 27, 18, 26], [32, 35, 37, 39], [1000, 1001, 857, 1]]
             let ArrayList = 'Array List  ' + arr
            let Array= largestOfFour(arr)
+           var ar = [5, 6, 7, 8, 1, 2, 12, 14]
+           let sort =bubbleSort(ar)
               let msg = 'Largest number from each provided sub-array' + Array
               let FinalObj={
                 ArrayList,
-                msg
+                msg,
+                sort
               }
             callback(null, FinalObj)
         }
@@ -153,5 +156,19 @@ function ReverseStringIterative (string) {
     return arr.map(Function.apply.bind(Math.max, null));
   }
   
+  function bubbleSort (items) {
+    const length = items.length
+    for (let i = (length - 1); i > 0; i--) {
+      // Number of passes
+      for (let j = (length - i); j > 0; j--) {
+        // Compare the adjacent positions
+        if (items[j] < items[j - 1]) {
+          // Swap the numbers
+          [items[j], items[j - 1]] = [items[j - 1], items[j]]
+        }
+      }
+    }
+    return items
+  }
 
 module.exports = funcsave;

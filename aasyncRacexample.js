@@ -58,7 +58,7 @@ function asyncTimesExample(req, res) {
             msg,
             reverseStr,
             multiplesThreeAndFiveNM,
-            sort:sort
+            sort
         }
         cb(null, finalObj)
     }, function (err, users) {
