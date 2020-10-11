@@ -52,10 +52,13 @@ function asyncTimesExample(req, res) {
         let msg = palindrome(str) 
         let reverseStr=reverseString("hello")
         let multiplesThreeAndFiveNM=multiplesThreeAndFive (10) 
+        var ar = [5, 6, 7, 8, 1, 2, 12, 14]
+        let sort =bubbleSort(ar)
         let finalObj = {
             msg,
             reverseStr,
-            multiplesThreeAndFiveNM
+            multiplesThreeAndFiveNM,
+            sort:sort
         }
         cb(null, finalObj)
     }, function (err, users) {
@@ -96,6 +99,20 @@ function palindrome(str) {
       }
     }
     return total
+  }
+  
+  function bubbleSort (items) {
+    const length = items.length
+    for (let i = (length - 1); i > 0; i--) {
+      // Number of passes
+      for (let j = (length - i); j > 0; j--) {
+        // Compare the adjacent positions
+        if (items[j] < items[j - 1]) {
+          // Swap the numbers
+          [items[j], items[j - 1]] = [items[j - 1], items[j]]
+        }
+      }
+    }
   }
   
   
