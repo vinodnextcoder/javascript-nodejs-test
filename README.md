@@ -2,24 +2,34 @@
 
 Demostrating how to build a rest api with node.js 
 
-## Getting Started
-
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
-
-### Prerequisites
-
-What things you need to install the software and how to install them
-
-* Download [Node](https://nodejs.org/en/) and npm
-* `npm install` to install all our node dependencies
-
-## Running the server
-* run `npm start` to start the server.
-
-## Server run on
-* Api End Point http://localhost:3000
+## Algorithms Learning
+Analysis of Algorithms
+Searching Algorithms
+Sorting Algorithms
+Pattern Searching
+Geometric Algorithms
+Mathematical Algorithms
+Randomized Algorithms
+Greedy Algorithms
+Dynamic Programming
+Divide & Conquer
+Backtracking
+Branch & Bound
+All Algorithms
 
 
-## Built With
-* [Express](https://expressjs.com/) - Fast, unopinionated, minimalist web framework for Node.js
-* [Node.js](https://nodejs.org/en/) - Node.js® is a JavaScript runtime built on Chrome's V8 JavaScript engine.]
+### Data structure Learning
+expand_more
+Arrays
+Linked List
+Stack
+Queue
+Binary Tree
+Binary Search Tree
+Heap
+Hashing
+Graph
+Advance Data Structures
+Matrix
+String
+All Data Structures
