@@ -18,7 +18,7 @@ Branch & Bound
 All Algorithms
 
 
-### Data structure Learning
+### Data Structures Learning
 expand_more
 Arrays
 Linked List
