@@ -3,6 +3,7 @@
 Demostrating how to build a rest api with node.js 
 
 ## Algorithms Learning
+- Bulleted
 Analysis of Algorithms
 Searching Algorithms
 Sorting Algorithms
@@ -19,6 +20,7 @@ All Algorithms
 
 
 ### Data Structures Learning
+- Bulleted
 expand_more
 Arrays
 Linked List
