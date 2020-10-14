@@ -41,3 +41,30 @@ console.log(">>>>>>>>>>>>>>>",output);
 var rainbow1 =[5,3,1,4,6];
 let output1=bubble_Sort(rainbow1);
 console.log(">>>>>>>>>>>>>>>",output1);
+// Recursion Idea.  
+
+// Base Case: If array size is 1, return.
+// Do One Pass of normal Bubble Sort. This pass fixes last element of current subarray.
+// Recur for all elements except last of current subarray.
+//Recursive Bubble Sort
+let recursiveBubbleSort = (arr, n = arr.length) => {
+  //If there is only single element 
+  //the return the array
+  if(n == 1){
+    return arr;
+  }
+  
+  //Swap the elements by comparing them
+  for(let j = 0; j < n - 1; j++){
+    if(arr[j] > arr[j + 1]){
+      [arr[j], arr[j+1]] = [arr[j+1], arr[j]];
+    }
+  }
+  
+  //Recursively call the function to sort.
+  return recursiveBubbleSort(arr, n-1);
+}
+var rainbow3 =[5,3,1,4,6];
+
+let output3=recursiveBubbleSort(rainbow3);
+console.log(">>>>>>>>>>>>>>>",output3);
