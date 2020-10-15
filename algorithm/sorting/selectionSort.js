@@ -38,3 +38,41 @@ arr= [64 ,25,12,22,11]
 // 11 12 22 25 64 
 var rainbow =[64 ,25,12,22,11]
 selectionSort(rainbow)
+
+// The Selection Sort algorithm sorts maintains two parts.
+
+// First part that is already sorted
+// Second part that is yet to be sorted.
+// The algorithm works by repeatedly finding the minimum e
+// element (considering ascending order) from unsorted part and putting it at the end of sorted part.
+function selectionSortRecursive(arr) {
+
+  var swap = function(x, y) {
+      var temp = arr[y];
+      arr[y] = arr[x];
+      arr[x] = temp;
+  }
+
+  var sort = function(start) {
+      if (start === arr.length) {
+          return arr;
+      }
+
+      var min = start;
+
+      for (var i = start + 1; i < arr.length; i++) {
+          if (arr[i] < arr[min]) {
+              min = i;
+          }
+      }
+
+      swap(start, min);
+
+      return sort(start + 1);
+  }
+
+  return sort(0);
+}
+var rainbow =[64 ,25,12,22,11]
+var temp=selectionSortRecursive(rainbow);
+console.log(">>>>>>>>>>>>>>>>",temp);
