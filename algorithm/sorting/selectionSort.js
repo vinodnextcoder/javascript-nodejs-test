@@ -76,3 +76,37 @@ function selectionSortRecursive(arr) {
 var rainbow =[64 ,25,12,22,11]
 var temp=selectionSortRecursive(rainbow);
 console.log(">>>>>>>>>>>>>>>>",temp);
+/**
+ * Finds smallest element of an aray
+ * @param {Array} arr array for searching
+ * @return {number} index of the smallest element in array
+ */
+// const findSmallestIndex = ( arr ) => {
+//   let smallest = arr[0];
+//   let smallestIndex = 0;
+//   let arrLen = arr.length;
+
+//   for ( let i = 0; i < arrLen; i++ ) {
+//       if ( arr[i] < smallest ) {
+//           smallest = arr[i];
+//           smallestIndex = i;
+//       }
+//   }
+//   return smallestIndex;
+// };
+
+/**
+* Sorts recursively an array of numbers
+* @param {Array} arr An array of numbers
+* @return {Array} New sorted array
+*/
+// const selectionSort = ( arr ) => {
+//   if ( !arr.length ) return [];
+//   let newArray = Array.prototype.slice.call( arr );
+//   let smallest = arr.splice( findSmallestIndex( arr ), 1 );
+//   return smallest.concat( selectionSort( arr ) );
+// };
+
+// let arr = [23, 43, 23423, 66, 5, 57, 78, 0, 1];
+
+// console.log( selectionSort(arr) );
