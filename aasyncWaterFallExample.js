@@ -170,5 +170,21 @@ function ReverseStringIterative (string) {
     }
     return items
   }
+  var myArray = [
+    {date: "2017-01-01", num: "2"},
+    {date: "2017-01-02", num: "3"},
+    {date: "2017-02-04", num: "6"},
+    {date: "2017-02-05", num: "15"}
+],
+    groupKey = 0;
+    groups = myArray.reduce(function (r, o) {
+        var m = o.date.split(('-'))[1];
+        (r[m])? r[m].data.push(o) : r[m] = {group: String(groupKey++), data: [o]};
+        return r;
+    }, {});
+
+var result = Object.keys(groups).map(function(k){ return groups[k]; });
+
+console.log(result);
 
 module.exports = funcsave;
