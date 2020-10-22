@@ -35,3 +35,13 @@ let numbers = [4, 13, 27, 0, -5]; // Get max value of an array in Javascript
 
 var tempdata=Math.max.apply(null, numbers); 
 console.log(">>>>>>>>>>MAX >>>>>>>>",tempdata)
+
+let arr = [ 2, 3, 5, 8, 4 ];
+let values = [ 2, 4 ];
+
+arr = arr.filter(item => values.indexOf(item) === -1);
+console.log(arr);
+
+/*
+	Output: [ 3, 5, 8 ]
+*/
