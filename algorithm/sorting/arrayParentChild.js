@@ -30,3 +30,8 @@ console.log(sorted);
 console.log(tree);
 let tempArray=[1, 2, 3, 4];
 console.log(">>>>>>>>>>SUM IN REDUCE ARRAY>>>>>>>>",tempArray.reduce((a, b) => a + b, 0))
+
+let numbers = [4, 13, 27, 0, -5]; // Get max value of an array in Javascript
+
+var tempdata=Math.max.apply(null, numbers); 
+console.log(">>>>>>>>>>MAX >>>>>>>>",tempdata)
