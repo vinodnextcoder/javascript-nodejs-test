@@ -28,3 +28,5 @@ var data = [{ id: 8, name: 'Shirts', slug: 'shirts', parent_id: null },
 
 console.log(sorted);
 console.log(tree);
+let tempArray=[1, 2, 3, 4];
+console.log(">>>>>>>>>>SUM IN REDUCE ARRAY>>>>>>>>",tempArray.reduce((a, b) => a + b, 0))
