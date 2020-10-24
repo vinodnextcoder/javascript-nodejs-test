@@ -45,3 +45,13 @@ console.log(arr);
 /*
 	Output: [ 3, 5, 8 ]
 */
+
+const arr1 = [obj1, obj1];
+const arr2 = [obj1, obj2];
+const arr3 = [obj1, obj3];
+
+const arraysEqual = (a1, a2) => 
+   a1.length === a2.length && a1.every((o, idx) => objectsEqual(o, a2[idx]));
+
+console.log(arraysEqual(arr1, arr2)); // true
+console.log(arraysEqual(arr1, arr3)); // false
