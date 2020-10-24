@@ -55,3 +55,38 @@ const arraysEqual = (a1, a2) =>
 
 console.log(arraysEqual(arr1, arr2)); // true
 console.log(arraysEqual(arr1, arr3)); // false
+var assert = require('assert');
+var hash = require('object-hash');
+
+var obj1 = {a: 1, b: 2, c: 333},
+    obj2 = {b: 2, a: 1, c: 444},
+    obj3 = {b: "AAA", c: 555},
+    obj4 = {c: 555, b: "AAA"};
+
+var array1 = [obj1, obj2, obj3, obj4];
+var array2 = [obj3, obj2, obj4, obj1]; // [obj3, obj3, obj2, obj1] should work as well
+
+// calling assert.deepEquals(array1, array2) at this point FAILS (throws an AssertionError)
+// even if array1 and array2 contain the same objects in different order,
+// because array1[0].c !== array2[0].c
+
+// sort objects in arrays by their hashes, so that if the arrays are identical,
+// their objects can be compared in the same order, one by one
+var array1 = sortArrayOnHash(array1);
+var array2 = sortArrayOnHash(array2);
+
+// then, this should output "PASS"
+try {
+    assert.deepEqual(array1, array2);
+    console.log("PASS");
+} catch (e) {
+    console.log("FAIL");
+    console.log(e);
+}
+
+// You could define as well something like Array.prototype.sortOnHash()...
+function sortArrayOnHash(array) {
+    return array.sort(function(a, b) {
+        return hash(a) > hash(b);
+    });
+}
