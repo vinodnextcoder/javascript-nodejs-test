@@ -18,3 +18,12 @@ const leftRotatebyOne = (arr, n) => {
 arr = [1, 2, 3, 4, 5, 6, 7] 
 let temp=leftRotate(arr, 2, 7) 
 console.log(temp);
+
+console.log("####################SECOND######################");
+
+const findGCD = (a, b) => {
+    if (b == 0)
+        return a;
+    else
+        return gcd(b, a % b)
+};
