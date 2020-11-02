@@ -50,11 +50,12 @@ const arr1 = [obj1, obj1];
 const arr2 = [obj1, obj2];
 const arr3 = [obj1, obj3];
 
-const arraysEqual = (a1, a2) => 
-   a1.length === a2.length && a1.every((o, idx) => objectsEqual(o, a2[idx]));
+// const arraysEqual = (a1, a2) =>{
+//     a1.length === a2.length && a1.every((o, idx) => ObjectsEqual(o, a2[idx]));
+// } 
 
-console.log(arraysEqual(arr1, arr2)); // true
-console.log(arraysEqual(arr1, arr3)); // false
+// console.log(arraysEqual(arr1, arr2)); // true
+// console.log(arraysEqual(arr1, arr3)); // false
 var assert = require('assert');
 var hash = require('object-hash');
 
@@ -90,3 +91,17 @@ function sortArrayOnHash(array) {
         return hash(a) > hash(b);
     });
 }
+
+var data = [{ depth: 0, id: "f35vz2f" }, { depth: 0, id: "f359354" }, { depth: 1, id: "f35e0b0", parent_id: "f359354" }, { depth: 2, id: "f35ji24", parent_id: "f35e0b0" }, { depth: 2, id: "f35rnwb", parent_id: "" }, { depth: 2, id: "f35ojh4", parent_id: "f35e0b0" }, { depth: 3, id: "f35lmch", parent_id: "f35ji24" }, { depth: 3, id: "f35kl96", parent_id: "f35ji24" }],
+    tree = function (data, root) {
+        var t = {};
+        data.forEach(o => {
+            Object.assign(t[o.id] = t[o.id] || {}, o);
+            t[o.parent_id] = t[o.parent_id] || {};
+            t[o.parent_id].children = t[o.parent_id].children || [];
+            t[o.parent_id].children.push(t[o.id]);
+        });
+        return t[root].children;
+    }(data, undefined);
+
+console.log(tree);
