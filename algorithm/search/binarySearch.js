@@ -31,15 +31,19 @@ else
 
 
 const binarySearchSecond = (arr, l, r, x) => {
+  // While Start Index is less than or equal to End Index
   while (l <= r) {
+    // Define Middle Index (This will change when comparing )
     mid = l + (r - l) // 2;  
     // # Check if x is present at mid 
     if (arr[mid] == x)
       return mid
     // # If x is greater, ignore left half 
+    // Assign Start Index and increase the Index by 1 to narrow search
     else if (arr[mid] < x)
       l = mid + 1
     // # If x is smaller, ignore right half 
+    // Search Left Side Of Array
     else {
       r = mid - 1
     }
