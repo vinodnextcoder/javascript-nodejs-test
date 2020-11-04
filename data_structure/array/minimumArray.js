@@ -1,4 +1,4 @@
-A simple solution is to traverse the complete array and find a minimum. This solution requires O(n) time. 
+// A simple solution is to traverse the complete array and find a minimum. This solution requires O(n) time. 
 // We can do it in O(Logn) using Binary Search. If we take a closer look at the above examples, we can easily figure out the following pattern:
 
 // The minimum element is the only element whose previous is greater than it. If there is no previous element, then there is no rotation (the first element is minimum). We check this condition for the middle element by comparing it with (mid-1)’th and (mid+1)’th elements.
