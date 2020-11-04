@@ -9,7 +9,6 @@ const binarySearch = (arr, l, r, x) => {
     // # can only be present in left subarray 
     else if (arr[mid] > x)
       return binarySearch(arr, l, mid - 1, x)
-
     // # Else the element can only be present  
     // # in right subarray 
     else {
@@ -29,3 +28,23 @@ if (index != -1)
     console.log("Element", x,"is present at index %d",index )
 else
     console.log("Element %d is not present" ,x)
+
+
+const binarySearchSecond = (arr, l, r, x) => {
+  while (l <= r) {
+    mid = l + (r - l) // 2;  
+    // # Check if x is present at mid 
+    if (arr[mid] == x)
+      return mid
+    // # If x is greater, ignore left half 
+    else if (arr[mid] < x)
+      l = mid + 1
+    // # If x is smaller, ignore right half 
+    else {
+      r = mid - 1
+    }
+  }
+  // # If we reach here, then the element 
+  // # was not present 
+  return -1
+};
