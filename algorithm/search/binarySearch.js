@@ -43,8 +43,18 @@ const binarySearchSecond = (arr, l, r, x) => {
     else {
       r = mid - 1
     }
+    return mid
   }
   // # If we reach here, then the element 
   // # was not present 
   return -1
 };
+
+arr = [12, 34, 54, 2, 3] 
+n = arr.length
+x = 34
+let indexs = binarySearchSecond(arr, 0, n-1, x) 
+if (indexs != -1)
+    console.log("Element", x,"is present")
+else
+    console.log("Element %d is not present" ,x)
