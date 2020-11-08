@@ -24,3 +24,13 @@ var j = array1.length
 for(var i = 0; i < array1.length ; i++){
     console.log(array1[j])
     j=j-1 }
+
+    for(var i=1;i<=5;i++)
+    {
+        for(var j=1;j<=i;j++)
+            {
+                console.log("*");
+                
+            }
+        console.log("\n");
+    }
