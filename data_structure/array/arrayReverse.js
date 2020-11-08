@@ -18,3 +18,9 @@ var reversed = array.map(function reverse(item) {
                : item.reverse();
 });
 console.log(reversed)
+var array1 = ['a','b','c','d','e','f','g']
+var j = array1.length 
+
+for(var i = 0; i < array1.length ; i++){
+    console.log(array1[j])
+    j=j-1 }
