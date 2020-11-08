@@ -34,3 +34,10 @@ for(var i = 0; i < array1.length ; i++){
             }
         console.log("\n");
     }
+
+
+    activities.forEach((activity) => {
+        activity.forEach((data) => {
+            console.log(data);
+        });
+    });
