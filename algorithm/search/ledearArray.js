@@ -8,10 +8,18 @@ function duplicateArray(arr, n) {
         console.log(arr[i])
       }
   }
-  return arr
+  return 
 }
 // # Driver Code  
 arr = [12, 34, 54, 2, 3,2] 
 n = arr.length
 let temp =duplicateArray(arr, n);
 console.log(temp);
+
+function duplicateArray(arr, n) {
+  let removeArray=[]
+  for (var i=0; i<arr.length; i++) {
+    
+  }
+   return removeArray;
+}
