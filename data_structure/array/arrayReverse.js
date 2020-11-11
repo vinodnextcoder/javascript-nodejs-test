@@ -36,8 +36,10 @@ for(var i = 0; i < array1.length ; i++){
     }
 
 
-    activities.forEach((activity) => {
-        activity.forEach((data) => {
-            console.log(data);
-        });
+   
+    var removeItem = [1,2];
+    removeItem.forEach(function(id){
+       var itemIndex = a.findIndex(i => i.id == id);
+       a.splice(itemIndex,1);
     });
+    console.log(a);
