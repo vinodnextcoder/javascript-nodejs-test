@@ -10,3 +10,4 @@ function load() {
   }
     return list;
 }
+let str=`JavaScript first appeared ${a+b} years ago. Wow!`;
