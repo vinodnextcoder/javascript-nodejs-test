@@ -1,13 +1,12 @@
-function load() {
-    var list = [];
-    var keyArray = ["one","two","three","four","five"];
-  for (var i = 0; i < keyArray.length; i++) {
-        var item = localStorage.getItem(keyArray[i]);
-       if (item.charAt(0) == "+") {
-            item = parseFloat(item.substring(1));
-      }
-        list.push(item);
-  }
-    return list;
-}
-let str=`JavaScript first appeared ${a+b} years ago. Wow!`;
+var inputData = [ { id: 1, title: 'hippo', faveFood: 'carrots' },
+ { id: 2, title: 'Cat', faveFood: 'carrots' }, 
+ { id: 3, title: 'ducks', faveFood: 'breadcrumbs' }, ]
+
+ function findFood(title){
+   let foodName= _.find(inputData,function(ele){
+     return ele.title==title
+   })
+   return foodName;
+ }
+ let fname=findFood("Cat");
+ console.log(fname)
