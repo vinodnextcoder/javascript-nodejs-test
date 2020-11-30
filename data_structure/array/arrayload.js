@@ -10,3 +10,16 @@ var inputData = [ { id: 1, title: 'hippo', faveFood: 'carrots' },
  }
  let fname=findFood("Cat");
  console.log(fname)
+// custom filter
+function arrayFilter(arr, func) {
+  for (let elem of arr) {
+    if (func(elem)) {
+      return elem
+    }
+  }
+  return undefined
+}
+ function arrayFilter(arr, func) {
+  let filteredArray = arr.filter(func);
+  return filteredArray[0] ? filteredArray[0] : undefined;
+}
