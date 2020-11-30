@@ -1,40 +1,26 @@
-var inputData = [ { id: 1, title: 'hippo', faveFood: 'carrots' },
- { id: 2, title: 'Cat', faveFood: 'carrots' }, 
- { id: 3, title: 'ducks', faveFood: 'breadcrumbs' }, ]
+// JavaScript is single-threaded, which means that only one thing can happen at a time.
+//  Synchronous code is executed from top to bottom in the order that the code is written.
+//   Synchronous code is also "blocking" –– each line of 
+//   code waits for the previous line of code to be executed before it runs.
 
- function findFood(title){
-   let foodName= _.find(inputData,function(ele){
-     return ele.title==title
-   })
-   return foodName;
- }
- let fname=findFood("Cat");
- console.log(fname)
-// custom filter
-function arrayFilter(arr, func) {
-  for (let elem of arr) {
-    if (func(elem)) {
-      return elem
-    }
-  }
-  return undefined
-}
- function arrayFilter(arr, func) {
-  let filteredArray = arr.filter(func);
-  return filteredArray[0] ? filteredArray[0] : undefined;
+// In contrast, asynchronous code is "non-blocking" code that allows long-running
+//  requests to not block the main JavaScript thread. When the request is finished,
+//   additional code can then be executed. This is generally done in one of three ways:
+
+// Callbacks
+// Promises
+// Async/await
+// Callbacks
+// A callback function is a function that you pass to an asynchronous function as an argument. The callback function is executed once the asynchronous part of the work is done.
+
+// Let's simulate waiting for an API request to return a response by using the setTimeout method. A callback approach might look like this:
+function myAsyncMethod(callback) {
+  console.log('myAsyncMethod was executed')
+  setTimeout(callback, 1000)
 }
 
+function myCallbackMethod() {
+  console.log('myCallbackMethod was executed')
+}
 
-Array.prototype.mfilter =  function (fun) {
-  var filtered = [];
-  for(let i = 0; i < this.length; i++) {
-    if (fun(this[i], i, this)) filtered.push(this[i]);
-  }
-  return filtered;
-};
-
-var returnedArr = [1,2,3,4,5,6].mfilter(function(element, index, arr) {
-  return element > 5;
-});
-
-console.log(returnedArr);
+myAsyncMethod(myCallbackMethod)
