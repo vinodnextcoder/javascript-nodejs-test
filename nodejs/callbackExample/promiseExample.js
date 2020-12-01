@@ -18,3 +18,9 @@ console.log("#######>>>######",newArray)
 }
 
 AsyncCall().then(Promisecall)
+
+// / create a string
+const names = ['John', 'Peter', 'Mary'];
+const firstName = 'John'
+
+const hasMyName = names.some(name => name === firstName);
