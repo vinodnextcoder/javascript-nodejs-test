@@ -9,3 +9,10 @@ const filePaths = files.reduce((acc, file) => {
   return acc;
 }, []);
 console.log(filePaths);
+
+const filess = [ 'foo.txt ', '.bar', '   ', 'baz.foo' ];
+const filePathse = filess
+  .map(file => file.trim())
+  .filter(Boolean)
+  .map(fileName => `~/cool_app/${fileName}`);
+console.log(filess)
