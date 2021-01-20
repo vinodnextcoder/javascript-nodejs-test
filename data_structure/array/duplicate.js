@@ -10,12 +10,12 @@ const findDuplicates = nums => {
 
   for (let i = 0; i < nums.length; i++) {
     const index = Math.abs(nums[i]) - 1;
-
+    console.log(index)
     if (nums[index] < 0) {
-      console.log(nums[i])
+      
       result.push(Math.abs(nums[i]));
     } else {
-      console.log(nums[index])
+      
       nums[index] = -nums[index];
     }
   }
