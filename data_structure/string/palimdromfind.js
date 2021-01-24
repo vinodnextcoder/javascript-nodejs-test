@@ -4,11 +4,13 @@ let findAllPalindromeInSubstrings = function(input, j, k) {
     if (input[j] != input[k]) {
       break;
     }
+    
     console.log(input.substring(j, k + 1));
     count++;
     j--;
     k++;
   }
+  console.log("############>>>>>",input, j, k,"count",count,input[j], input[k]);
   return count;
 };
 
@@ -52,5 +54,5 @@ function countPalindrome(str)
 	return count;
 }
 
-let temp=countPalindrome("aaab")
-console.log(temp);
+// let temp=countPalindrome("aaab")
+// console.log(temp);
