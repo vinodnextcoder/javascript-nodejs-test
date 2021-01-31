@@ -21,6 +21,6 @@ let arr = [15, 2, 4, 8, 9, 5, 10, 23]
 // let n = 7
 let sum = 23
 
-console.log(subArraySum(arr, 8, sum))
+subArraySum(arr, 8, sum)
     
        
