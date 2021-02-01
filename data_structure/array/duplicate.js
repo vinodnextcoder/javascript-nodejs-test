@@ -23,4 +23,10 @@ const findDuplicates = nums => {
   return result;
 };
 let temp=findDuplicates([4,3,2,7,8,2,3,1])
-console.log(temp);
+// console.log(temp);
+
+data=[1,2,3,3]
+function getDuplicate(data){
+  return data.filter((value,index)=>data.indexOf(value)===index);
+}
+console.log(getDuplicate(data))
