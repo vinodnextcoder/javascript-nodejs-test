@@ -40,7 +40,22 @@ var moveNegative=(arr,n)=>{
      j++;
     }
   }
-  console.log(arr);
+  // console.log(arr);
 }
 
-moveNegative(ar,m)
+// moveNegative(ar,m)
+
+var rotateLeft=(arr,n,k)=>{
+let mod=k%n;
+let arra=[]
+for(i=0;i<n;i++){
+  console.log((mod + i) % n)
+  arra.push(arr[(mod + i) % n])
+  // console.log(arr[(mod + i) % n]);
+}
+console.log("######################")
+console.log(arr)
+console.log(arra)
+
+}
+rotateLeft(ar,m,2)
